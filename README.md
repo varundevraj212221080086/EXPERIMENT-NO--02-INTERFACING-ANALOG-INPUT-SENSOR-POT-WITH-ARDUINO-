@@ -1,8 +1,8 @@
- ###  DATE: 
+ ###  DATE: 23/02/2024 
 
-###  NAME: 
-###  ROLL NO :
-###  DEPARTMENT: 
+###  NAME: k.varundevraj 
+###  ROLL NO : 212221080086
+###  DEPARTMENT: mechanical engineering 
 
 **AIM**:  To interface a Analog  input (angular displacement sensor POT) and scale the values up on change in the input.
 
@@ -68,7 +68,29 @@ CIRCUIT DIAGRAM
 
 
 **PROGRAM** 
- 
+ int pot;
+int led=7;
+void setup()
+{
+  pinMode(led, OUTPUT);
+  Serial.begin(9600);
+}
+
+void loop()
+{
+  pot=analogRead(A0);
+//  Serial.print("Value=");
+  Serial.println(pot);
+  if(pot>900)
+  {  
+  // turn the LED on (HIGH is the voltage level)
+  digitalWrite(led, HIGH);
+  delay(500); // Wait for 1000 millisecond(s)
+  // turn the LED off by making the voltage LOW
+  digitalWrite(led, LOW);
+  delay(500);
+  }// Wait for 1000 millisecond(s)
+}
 
 
 
@@ -82,8 +104,14 @@ CIRCUIT DIAGRAM
 **Simulation output:** 
 **
 
+![hoses1](https://github.com/varundevraj212221080086/EXPERIMENT-NO--02-INTERFACING-ANALOG-INPUT-SENSOR-POT-WITH-ARDUINO-/assets/161024553/5c7cfc40-2894-4e5d-a030-ecc0ef30131a)
+![hoses1](https://github.com/varundevraj212221080086/EXPERIMENT-NO--02-INTERFACING-ANALOG-INPUT-SENSOR-POT-WITH-ARDUINO-/assets/161024553/5097f11e-f770-4293-9ec7-499e7fef1a49)
+![hoses3](https://github.com/varundevraj212221080086/EXPERIMENT-NO--02-INTERFACING-ANALOG-INPUT-SENSOR-POT-WITH-ARDUINO-/assets/161024553/d6d82fcc-c2b3-4c85-b85c-7345a8f54efe)
 
-[My image](username.github.com/repository/img/image.jpg)
+
+
+
+
 
 
 
